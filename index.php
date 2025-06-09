@@ -5,7 +5,7 @@
 		<title>Our Town America &centerdot; Home</title>
 		<?php wp_head(); ?>
 	</head>
-	<body>
+	<body class="pt">
 
 		<?php get_template_part('template-parts/top-nav'); ?>
 

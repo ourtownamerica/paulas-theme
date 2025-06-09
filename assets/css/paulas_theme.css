@@ -1,9 +1,9 @@
-body{
+body.pt{
 	font-family: 'SchibstedGrotesk';
 	background-color: #ffffff;
 }
 
-p{
+body.pt p{
 	font-size: 18px;
 }
 
@@ -91,7 +91,7 @@ p{
 	color: rgb(105, 174, 101);
 }
 
-h1,h2,h3,h4,h5,h6{
+body.pt h1,body.pt h2,body.pt h3,body.pt h4,body.pt h5,body.pt h6{
 	font-family: 'LTMuseum';
 }
 
@@ -301,4 +301,8 @@ h1,h2,h3,h4,h5,h6{
 .footer-nav a, .footer-nav a:hover, .footer-nav a:visited{
 	color: #ffffff;
 	text-decoration: none;
+}
+
+.theme-name{
+	box-sizing: content-box;
 }

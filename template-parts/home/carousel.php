@@ -26,12 +26,30 @@
 				</div>
 			</div>
 
+			<div class="carousel-item">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 d-flex align-items-center">
+							<div>
+								<h1 class="text-forest">Deliver a Birthday Postcard <span class="text-leaf">Earn a Repeat Customer</span></h1>
+								
+								<p>Our Birthday program delivers personalized birthday postcards that drive visits, loyalty, and repeat business.</p>
+								<a href="#" class="btn btn-gold px-5 py-2 my-1">GET STARTED</a>
+								<a href="#" class="btn btn-outline-gold px-5 py-2 my-1">HOW IT WORKS</a>
+							</div>
+						</div>
+						<div class="col-md-6 d-none d-md-block">
+							<img src="<?php echo get_template_directory_uri()."/assets/images/carousel-2.png"; ?>" class="d-block w-100" alt="New Movers discovering their welcome package in the mail.">
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 		<div class="carousel-indicators d-none d-md-flex">
 			<button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 			<button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-			<button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
 		</div>
 	</div>
 
