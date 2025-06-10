@@ -1,5 +1,7 @@
 
 
+AOS.init();
+
 const client_carousel = document.querySelector('.logo-carousel');
 if(client_carousel){
 	const logos = document.querySelectorAll('.client-logo');

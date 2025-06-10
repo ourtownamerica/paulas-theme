@@ -18,6 +18,10 @@ function paulas_theme_enqueue_styles(){
 	$fontawesome_path = TEMPLATE_DIR_URI.'/assets/fontawesome/css/all.min.css';
 	wp_enqueue_style('fontawesome', $fontawesome_path, [], @filemtime($fontawesome_path));
 
+	// Load aos css
+	$aos_path = TEMPLATE_DIR_URI.'/assets/css/aos.css';
+	wp_enqueue_style('aos', $aos_path, [], @filemtime($aos_path));
+
 	// Load main theme css
 	$theme_path = TEMPLATE_DIR_URI.'/assets/css/paulas_theme.css';
 	wp_enqueue_style('paulas_theme', $theme_path, ['bootstrap', 'fonts'], @filemtime($theme_path));

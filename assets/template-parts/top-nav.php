@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg topnavbar mb-5">
 	<div class="container">
-    	<a class="navbar-brand" href="#"><img src='<?php echo get_template_directory_uri()."/assets/images/nav-logo.png"; ?>' /></a>
+    	<a data-aos="zoom-in" data-aos-duration="2000" class="navbar-brand" href="#"><img src='<?php echo get_template_directory_uri()."/assets/images/nav-logo.png"; ?>' /></a>
 
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>

@@ -3,7 +3,7 @@
 		<h6 class="sm-header">SERVICES</h6>
 		<h1 class="text-forest mx-auto short-header">Local Marketing Solutions to Win More Customers &amp; Outshine Competitors</h1>
 
-		<div class="zero-font">
+		<div class="zero-font" data-aos="zoom-in-right">
 			<div class="fifth">
 				<div class="p-3">
 					<img src="<?php echo get_template_directory_uri()."/assets/images/services-icon-nmm.png"; ?>" class="w-100" />
@@ -14,7 +14,7 @@
 				</div>
 			</div>
 
-			<div class="fifth">
+			<div class="fifth" data-aos="zoom-in-right">
 				<div class="p-3">
 					<img src="<?php echo get_template_directory_uri()."/assets/images/services-icon-bp.png"; ?>" class="w-100" />
 					<hr class="gold-hr mb-3" />
@@ -24,7 +24,7 @@
 				</div>
 			</div>
 
-			<div class="fifth">
+			<div class="fifth" data-aos="zoom-in-up">
 				<div class="p-3">
 					<img src="<?php echo get_template_directory_uri()."/assets/images/services-icon-eddm.png"; ?>" class="w-100" />
 					<hr class="gold-hr mb-3" />
@@ -34,7 +34,7 @@
 				</div>
 			</div>
 
-			<div class="fifth">
+			<div class="fifth" data-aos="zoom-in-left">
 				<div class="p-3">
 					<img src="<?php echo get_template_directory_uri()."/assets/images/services-icon-tgt.png"; ?>" class="w-100" />
 					<hr class="gold-hr mb-3" />
@@ -44,7 +44,7 @@
 				</div>
 			</div>
 
-			<div class="fifth">
+			<div class="fifth" data-aos="zoom-in-left">
 				<div class="p-3">
 					<img src="<?php echo get_template_directory_uri()."/assets/images/services-icon-dm.png"; ?>" class="w-100" />
 					<hr class="gold-hr mb-3" />

@@ -4,7 +4,7 @@
 		<h1 class="text-forest mx-auto short-header text-center">Ready to grow your business?<br>Get started today!</h1>
 
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-6" data-aos="fade-up-right">
 				<p><big><b class="text-forest">Next Steps:</b></big></p>
 				
 				<div class="d-flex align-items-start mb-3">
@@ -40,7 +40,7 @@
 				</div>
 
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6" data-aos="fade-up-left">
 				<form class="contact-us-form">
 					
 					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="First Name*">
