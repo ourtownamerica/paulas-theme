@@ -27,6 +27,10 @@ body.pt p{
 	color: rgb(228,179,82);
 }
 
+.text-white{
+	color: #FFFFFF;
+}
+
 .btn-gold {
 	color: #fff;
 	background-color: rgb(228,179,82);
@@ -99,17 +103,13 @@ body.pt h1,body.pt h2,body.pt h3,body.pt h4,body.pt h5,body.pt h6{
 	color: rgb(105, 174, 101);
 	font-weight: bold;
 	text-align:center;
-	font-family: 'SchibstedGrotesk';
+	font-family: 'SchibstedGrotesk' !important;
 }
 
 .sm-header-left{
 	color: rgb(105, 174, 101);
 	font-weight: bold;
-	font-family: 'SchibstedGrotesk';
-}
-
-.carousel-wrapper {
-	position: relative;
+	font-family: 'SchibstedGrotesk' !important;
 }
 
 .carousel-control-prev-custom.outside,
@@ -149,6 +149,10 @@ body.pt h1,body.pt h2,body.pt h3,body.pt h4,body.pt h5,body.pt h6{
 
 .bg-gray{
 	background-color: rgb(246, 246, 245);	
+}
+
+.bg-leaf{
+	background-color: rgb(105, 174, 101);
 }
 
 .short-header{
@@ -260,6 +264,14 @@ body.pt h1,body.pt h2,body.pt h3,body.pt h4,body.pt h5,body.pt h6{
   width: 150px;
   height: 80px;
   margin: 0 10px;
+  object-fit: contain;
+}
+
+.samples-carousel-img {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 200px;
+  margin: 0 20px;
   object-fit: contain;
 }
 

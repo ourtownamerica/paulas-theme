@@ -3,13 +3,11 @@
 const client_carousel = document.querySelector('.logo-carousel');
 if(client_carousel){
 	const logos = document.querySelectorAll('.client-logo');
-	const prevBtn = document.querySelector('.carousel-nav.prev');
-	const nextBtn = document.querySelector('.carousel-nav.next');
+	const prevBtn = document.querySelector('.logo-carousel-wrapper .carousel-nav.prev');
+	const nextBtn = document.querySelector('.logo-carousel-wrapper .carousel-nav.next');
 
 	const visibleCount = Math.floor(client_carousel.parentElement.offsetWidth / (logos[0].offsetWidth + 20));
 	const totalItems = logos.length;
-
-	console.log(visibleCount,totalItems );
 
 	// Clone first `visibleCount` logos and append them to the end
 	for (let i = 0; i < visibleCount; i++) {
@@ -62,6 +60,69 @@ if(client_carousel){
 		client_carousel.style.transform = `translateX(-${scrollIndex * itemWidth}px)`;
 	});
 }
+
+const samples_carousel = document.querySelector('.samples-carousel');
+if(samples_carousel){
+	const samples = document.querySelectorAll('.samples-carousel-img');
+	const prevBtn = document.querySelector('.samples-carousel-wrapper .carousel-nav.prev');
+	const nextBtn = document.querySelector('.samples-carousel-wrapper .carousel-nav.next');
+
+	const visibleCount = Math.floor(samples_carousel.parentElement.offsetWidth / (samples[0].offsetWidth + 20));
+	const totalItems = samples.length;
+
+	// Clone first `visibleCount` samples and append them to the end
+	for (let i = 0; i < visibleCount; i++) {
+		const clone = samples[i].cloneNode(true);
+		samples_carousel.appendChild(clone);
+	}
+
+	let scrollIndex = 0;
+	const itemWidth = samples[0].offsetWidth + 40;
+
+	let nextCarousel = () => {
+		scrollIndex++;
+		samples_carousel.style.transition = 'transform 0.5s ease';
+		samples_carousel.style.transform = `translateX(-${scrollIndex * itemWidth}px)`;
+
+		if (scrollIndex === totalItems) {
+			// Reset to start instantly after transition
+			setTimeout(() => {
+				samples_carousel.style.transition = 'none';
+				scrollIndex = 0;
+				samples_carousel.style.transform = `translateX(0)`;
+			}, 500);
+		}
+	};
+
+	setInterval(nextCarousel, 3000);
+
+	nextBtn.addEventListener('click', nextCarousel);
+
+	prevBtn.addEventListener('click', () => {
+		if (scrollIndex === 0) {
+			scrollIndex = totalItems;
+			samples_carousel.style.transition = 'none';
+			samples_carousel.style.transform = `translateX(-${scrollIndex * itemWidth}px)`;
+			// Force reflow before animating back
+			requestAnimationFrame(() => {
+				samples_carousel.style.transition = 'transform 0.5s ease';
+				scrollIndex--;
+				samples_carousel.style.transform = `translateX(-${scrollIndex * itemWidth}px)`;
+			});
+		} else {
+			scrollIndex--;
+			samples_carousel.style.transition = 'transform 0.5s ease';
+			samples_carousel.style.transform = `translateX(-${scrollIndex * itemWidth}px)`;
+		}
+	});
+
+	window.addEventListener('resize', () => {
+		samples_carousel.style.transition = 'none';
+		samples_carousel.style.transform = `translateX(-${scrollIndex * itemWidth}px)`;
+	});
+}
+
+
 
 document.querySelectorAll('form.contact-us-form').forEach(form=>{
 	form.addEventListener('submit', e=>{

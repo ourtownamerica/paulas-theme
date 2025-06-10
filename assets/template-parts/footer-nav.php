@@ -69,5 +69,14 @@
 				<a href="#" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-google.png"; ?>" /></a>
 			</div>
 		</div>
+		<div >
+			<small class="float-start text-start">
+				&copy <?php echo date('Y'); ?> Our Town America | All Rights Reserved
+			</small>
+			<small class="float-end text-end">
+				<a href="#">Terms of Use</a> | <a href="#">Legal</a> | <a href="#">Privacy Policy</a>
+			</small>
+			<div class="clearfix"></div>
+		</div>
 	</div>
 </div>

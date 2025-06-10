@@ -2,24 +2,20 @@
 <html>
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
-		<title>Our Town America &centerdot; Home</title>
+		<title>Our Town America &centerdot; Industry Highlights</title>
 		<?php wp_head(); ?>
 	</head>
 	<body class="pt">
 
 		<?php get_template_part('assets/template-parts/top-nav'); ?>
 
-		<?php get_template_part('assets/template-parts/home/carousel'); ?>
+		<?php get_template_part('assets/template-parts/industries/industry'); ?>
 
 		<?php get_template_part('assets/template-parts/services'); ?>
 
-		<?php get_template_part('assets/template-parts/home/dm-feature'); ?>
+		<?php get_template_part('assets/template-parts/see-how'); ?>
 
-		<?php get_template_part('assets/template-parts/home/why-ota'); ?>
-
-		<?php get_template_part('assets/template-parts/home/clients-carousel'); ?>
-
-		<?php get_template_part('assets/template-parts/home/media-kit'); ?>
+		<?php get_template_part('assets/template-parts/industries/samples-carousel'); ?>
 
 		<?php get_template_part('assets/template-parts/contact-us'); ?>
 
