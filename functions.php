@@ -21,3 +21,17 @@ add_action('add_meta_boxes', 'add_industry_meta_box');
 add_action('save_post', 'save_industry_meta_data');
 add_action('admin_enqueue_scripts', 'industry_enqueue_admin_scripts');
 add_filter('wp_insert_post_data', 'set_industry_custom_title', 99, 2);
+
+// Add custom fields for the team members
+require TEMPLATE_DIR . '/assets/php/add_team_meta_box.php';
+add_action('add_meta_boxes', 'add_team_meta_box');
+add_action('save_post', 'save_team_meta_data');
+add_action('admin_enqueue_scripts', 'team_enqueue_admin_scripts');
+add_filter('wp_insert_post_data', 'set_team_custom_title', 99, 2);
+
+// Custom routing rules for static pages
+require TEMPLATE_DIR . '/assets/php/custom_routes.php';
+add_action('init', 'add_rewrite_rules');
+add_filter('query_vars', 'add_custom_query_vars');
+add_filter('template_include', 'load_custom_templates');
+add_filter('wp_insert_post_data', 'prevent_page_creation', 10, 2);

@@ -1,4 +1,4 @@
-<div class="bg-gray p-3 main-contact-us pt-5">
+<div class="bg-gray p-3 main-contact-us pt-5" id="contact-us-btm">
 	<div class="container">
 		<h6 class="sm-header text-center">CONTACT US</h6>
 		<h1 class="text-forest mx-auto short-header text-center">Ready to grow your business?<br>Get started today!</h1>

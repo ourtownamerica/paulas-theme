@@ -24,7 +24,7 @@
 				<a class="d-block mb-2" href="#">Targeted Postcard</a>
 				<a class="d-block mb-4" href="#">Digital Marketing</a>
 
-				<a class="d-block mb-4" href="#"><b class="d-block">ABOUT US</b></a>
+				<a class="d-block mb-4" href="<?php echo home_url('/about'); ?>"><b class="d-block">ABOUT US</b></a>
 			</div>
 			<div class="col-md-3">
 				<b class="d-block mb-2">INDUSTRY FOCUS</b>
@@ -34,7 +34,7 @@
 				<a class="d-block mb-2" href="#">Pet Care</a>
 				<a class="d-block mb-2" href="#">Pizzarias</a>
 				<a class="d-block mb-2" href="#">Supermarket</a>
-				<a class="d-block mb-4" href="#">...And More</a>
+				<a class="d-block mb-4" href="<?php echo home_url('/industries'); ?>">...And More</a>
 			</div>
 			<div class="col-md-3">
 				<b class="d-block mb-2">FRANCHISE</b>
@@ -52,8 +52,8 @@
 			</div>
 			<div class="col-md-3">
 				<b class="d-block mb-2">CONTACT US</b>
-				<a class="d-block mb-2" href="#">Corporate</a>
-				<a class="d-block mb-4" href="#">Your Local Franchise</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/contact-us'); ?>">Corporate</a>
+				<a class="d-block mb-4" href="<?php echo home_url('/advertise-local'); ?>">Your Local Franchise</a>
 
 				<span class="d-block mb-4">13900 US 19 North,<br>Clearwater, FL 33764</span>
 
@@ -61,12 +61,12 @@
 
 				<b class="d-block mb-2">CONNECT WITH US</b>
 
-				<a href="#" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-facebook.png"; ?>" /></a>
-				<a href="#" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-insta.png"; ?>" /></a>
-				<a href="#" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-x.png"; ?>" /></a>
-				<a href="#" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-linkedin.png"; ?>" /></a>
-				<a href="#" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-youtube.png"; ?>" /></a>
-				<a href="#" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-google.png"; ?>" /></a>
+				<a href="https://www.facebook.com/OurTownAmericaofTampaBay/" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-facebook.png"; ?>" /></a>
+				<a href="https://www.instagram.com/ourtownamerica/" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-insta.png"; ?>" /></a>
+				<a href="https://x.com/OurTownAmerica" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-x.png"; ?>" /></a>
+				<a href="https://www.linkedin.com/company/ourtown-america-inc-/" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-linkedin.png"; ?>" /></a>
+				<a href="https://www.youtube.com/ourtownamerica" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-youtube.png"; ?>" /></a>
+				<a href="https://www.google.com/search?q=our+town+america" class="d-inline-block"><img src="<?php echo get_template_directory_uri()."/assets/images/contact-us-google.png"; ?>" /></a>
 			</div>
 		</div>
 		<div >

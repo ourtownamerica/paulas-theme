@@ -15,7 +15,7 @@
 								<h1 class="text-forest">Grow your business with <span class="text-leaf">New Mover Marketing</span></h1>
 								
 								<p>Reach high-intent customers and boost sales with targeted welcome mailers that connect you to new movers before your competitors.</p>
-								<a href="#" class="btn btn-gold px-5 py-2 my-1">GET STARTED</a>
+								<a href="#contact-us-btm" class="btn btn-gold px-5 py-2 my-1">GET STARTED</a>
 								<a href="#" class="btn btn-outline-gold px-5 py-2 my-1">HOW IT WORKS</a>
 							</div>
 						</div>
@@ -34,7 +34,7 @@
 								<h1 class="text-forest">Deliver a Birthday Postcard <span class="text-leaf">Earn a Repeat Customer</span></h1>
 								
 								<p>Our Birthday program delivers personalized birthday postcards that drive visits, loyalty, and repeat business.</p>
-								<a href="#" class="btn btn-gold px-5 py-2 my-1">GET STARTED</a>
+								<a href="#contact-us-btm" class="btn btn-gold px-5 py-2 my-1">GET STARTED</a>
 								<a href="#" class="btn btn-outline-gold px-5 py-2 my-1">HOW IT WORKS</a>
 							</div>
 						</div>

@@ -148,3 +148,143 @@ document.querySelectorAll('.topnavbar .dropdown').forEach(function (dropdown) {
 		menu.classList.remove('show');
 	});
 });
+
+// Contact us map
+let zee_map = document.getElementById('contact-us-map');
+if(zee_map) (async ()=>{
+
+	await loadGoogleMaps();
+
+	let map = new google.maps.Map(zee_map, {
+		center: new google.maps.LatLng(39.50, -98.35),
+		zoom: 4,
+		zoomControl: false,
+		mapTypeControl: false,
+		scaleControl: false,
+		streetViewControl: false,
+		rotateControl: false,
+		fullscreenControl: false,
+		mapTypeId: google.maps.MapTypeId.STREET
+	});
+
+	let zees = await fetch('https://rockwell.ourtownamerica.com/intra/api/website/index.php', {
+		method: 'POST',
+		headers: {'Content-Type': 'application/json'},
+		body: JSON.stringify({action: 'get_zees'})
+	}).then(r => r.json());
+
+	const formatPhoneNumber = (phone) => {
+		const digits = phone.replace(/\D/g, '');
+		if (digits.length !== 10) return phone;
+		const area = digits.slice(0, 3);
+		const prefix = digits.slice(3, 6);
+		const line = digits.slice(6);
+		return `(${area}) ${prefix}-${line}`;
+	}
+
+	const renderZee = zee => {
+		document.getElementById('zee-display-area').innerHTML = `<p class='text-forest'><big><b>${zee.city}, ${zee.state}</b></big></p>
+		<p class='text-forest mb-0'>${zee.contactfirst} ${zee.contactlast}</p>
+		<a href="mailto:${zee.email}" class="mb-0 d-block mb-3 regularlink">${zee.email}</a>
+		<a href="tel:+1${zee.primaryphone}" class="d-block biglink text-leaf"><b>${formatPhoneNumber(zee.primaryphone)}</b></a>`;
+	};
+
+	zees.data.forEach(zee=>{
+
+		const marker = new google.maps.Marker({
+			position: { lat: zee.latitude, lng: zee.longitude },
+			map: map,
+			icon: {
+				url: `${wpData.templateUrl}/assets/images/map-pin.png`,
+				scaledSize: new google.maps.Size(30, 30)
+			}
+		});
+
+		const infoWindow = new google.maps.InfoWindow({
+			content: `<b>${zee.city}, ${zee.state}</b>`
+		});
+
+		marker.addListener('mouseover', () => {
+			infoWindow.open(map, marker);
+		});
+
+		marker.addListener('mouseout', () => {
+			infoWindow.close();
+		});
+
+		marker.addListener('click', () => {
+			renderZee(zee);
+		});
+	});
+
+	const getDistance = (lat1, lon1, lat2, lon2) => {
+		const R = 6371; // Radius of Earth in km
+		const dLat = (lat2 - lat1) * Math.PI / 180;
+		const dLon = (lon2 - lon1) * Math.PI / 180;
+		const a = 
+			Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+			Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+			Math.sin(dLon / 2) * Math.sin(dLon / 2);
+		const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+		return R * c; // distance in km
+	};
+
+	const getClosestZee = (lat, lng) => {
+		let closest = null;
+		let distance = null;
+		zees.data.forEach(zee=>{
+			let dist = getDistance(lat, lng, zee.latitude, zee.longitude);
+			if(closest === null || distance > dist){
+				distance = dist;
+				closest = zee;
+			}
+		});
+		return closest;
+	};
+
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(
+			(position) => {
+				const lat = position.coords.latitude;
+				const lng = position.coords.longitude;
+				renderZee(getClosestZee(lat, lng));
+			},
+			(error) => {
+				console.error('Error getting location:', error.message);
+			}
+		);
+	}
+
+	document.getElementById('contact-mapform').addEventListener('submit', async function(e){
+		e.preventDefault();
+		let addr = document.getElementById('contact-address-input').value.trim();
+		let res = await fetch('https://rockwell.ourtownamerica.com/intra/api/website/index.php', {
+			method: 'POST',
+			headers: {'Content-Type': 'application/json'},
+			body: JSON.stringify({action: 'geocode', location: addr})
+		}).then(r => r.json());
+		if(res?.data?.geocode?.formatted){
+			document.getElementById('contact-address-input').value = res.data.geocode.formatted;
+			renderZee(getClosestZee(res.data.geocode.lat, res.data.geocode.lng));
+		}
+	});
+
+})();
+
+async function loadGoogleMaps() {
+	if (document.getElementById('google-maps-script')) return;
+
+	const script = document.createElement('script');
+	script.id = 'google-maps-script';
+	script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDOt7i0oBD4X7Rza4NLu9XcaS5SV0vhZQI';
+	script.async = true;
+	script.defer = true;
+
+	document.head.appendChild(script);
+
+	// Wait until the script loads
+	return new Promise((resolve, reject) => {
+		script.onload = () => resolve();
+		script.onerror = () => reject(new Error('Failed to load Google Maps script'));
+	});
+}

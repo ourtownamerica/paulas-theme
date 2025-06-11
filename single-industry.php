@@ -17,7 +17,7 @@
 
 		<?php get_template_part('assets/template-parts/industries/samples-carousel'); ?>
 
-		<?php get_template_part('assets/template-parts/contact-us'); ?>
+		<?php get_template_part('assets/template-parts/contact-us/contact-us'); ?>
 
 		<?php get_template_part('assets/template-parts/footer-nav'); ?>
 

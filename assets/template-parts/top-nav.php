@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg topnavbar mb-5">
 	<div class="container">
-    	<a data-aos="zoom-in" data-aos-duration="2000" class="navbar-brand" href="#"><img src='<?php echo get_template_directory_uri()."/assets/images/nav-logo.png"; ?>' /></a>
+    	<a data-aos="zoom-in" data-aos-duration="2000" class="navbar-brand" href="<?php echo home_url(); ?>"><img src='<?php echo get_template_directory_uri()."/assets/images/nav-logo.png"; ?>' /></a>
 
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -33,7 +33,7 @@
 						<li><a class="dropdown-item" href="#">Pet Care</a></li>
 						<li><a class="dropdown-item" href="#">Pizzarias</a></li>
 						<li><a class="dropdown-item" href="#">Supermarket</a></li>
-						<li><a class="dropdown-item" href="#">...And More</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/industries'); ?>">...And More</a></li>
 					</ul>
 				</li>
 
@@ -68,17 +68,17 @@
 						Contact Us
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Corporate</a></li>
-						<li><a class="dropdown-item" href="#">Your Local Franchise</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/contact-us'); ?>">Corporate</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/advertise-local'); ?>">Your Local Franchise</a></li>
 					</ul>
 				</li>
 			
 				<li class="nav-item">
-					<a class="nav-link" aria-current="page" href="#">About Us</a>
+					<a class="nav-link" aria-current="page" href="<?php echo home_url('/about'); ?>">About Us</a>
 				</li>
 
 				<li class="nav-item">
-					<a class="btn btn-gold ms-lg-3" href="#">Request A Quote</a>
+					<a class="btn btn-gold ms-lg-3" href="<?php echo home_url('/contact-us'); ?>">Request A Quote</a>
 				</li>
 
 				

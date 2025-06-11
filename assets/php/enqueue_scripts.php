@@ -17,5 +17,8 @@ function paulas_theme_enqueue_scripts() {
 	// Load main js on every page
 	$mainjs_path = TEMPLATE_DIR_URI.'/assets/js/index.js';
 	wp_enqueue_script('index-js', $mainjs_path, ['bootstrap-js', 'aos-js'], @filemtime($mainjs_path), true);
+	wp_localize_script('index-js', 'wpData', [
+		'templateUrl' => TEMPLATE_DIR_URI
+	]);
 
 }

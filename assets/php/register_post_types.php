@@ -2,6 +2,26 @@
 
 function register_custom_post_types() {
 
+	// Register the employees post type
+	register_post_type('team', [
+        'labels' => [
+			'name' => 'Team Members',
+			'singular_name' => 'Team Member',
+			'add_new' => 'Add Team Member',
+			'add_new_item' => 'Add Team Member',
+			'edit_item' => 'Edit Team Member',
+			'new_item' => 'New Team Member',
+			'view_item' => 'View Team',
+			'search_items' => 'Search Team',
+			'all_items' => 'All Team Members',
+			'item_published' => 'Team Member Published'
+		],
+        'public' => false,
+        'show_ui' => true,
+        'supports' => [],
+        'menu_icon' => 'dashicons-groups'
+    ]);
+
 	// Register the Industry post types
 	register_post_type('industry', [
 		'labels' => [
@@ -32,4 +52,6 @@ function register_custom_post_types() {
 
 	remove_post_type_support('industry', 'title');
     remove_post_type_support('industry', 'editor');
+	remove_post_type_support('team', 'title');
+    remove_post_type_support('team', 'editor');
 }

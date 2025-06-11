@@ -7,7 +7,7 @@
 				<h1 class="text-forest">Local marketing solutions for <span class="text-leaf"><?php echo esc_html(get_post_meta(get_the_ID(), '_industry_name', true)); ?></span></h1>
 				<?php echo get_post_meta(get_the_ID(), '_industry_description', true); ?>
 				<br>
-				<a href="#" class="btn btn-gold px-5 py-2 mt-3">GET STARTED</a>
+				<a href="#contact-us-btm" class="btn btn-gold px-5 py-2 mt-3">GET STARTED</a>
 			</div>
 			<div class="col-md-4" data-aos="fade-down-left">
 				<?php
@@ -41,7 +41,7 @@
 					</div>
 				<?php endfor; ?>
 				
-				<a href="#" class="btn btn-forest px-5 py-2 mt-3">START YOUR CAMPAIGN</a>
+				<a href="#contact-us-btm" class="btn btn-forest px-5 py-2 mt-3">START YOUR CAMPAIGN</a>
 
 			</div>
 			<div class="col-md-4" data-aos="fade-up-left">
