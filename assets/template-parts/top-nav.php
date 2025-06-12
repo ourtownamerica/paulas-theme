@@ -14,7 +14,7 @@
 						Services
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">New Mover Marketing</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/new-mover-marketing'); ?>">New Mover Marketing</a></li>
 						<li><a class="dropdown-item" href="#">Birthday Program</a></li>
 						<li><a class="dropdown-item" href="#">EDDM Postcard</a></li>
 						<li><a class="dropdown-item" href="#">Targeted Postcard</a></li>
@@ -42,7 +42,7 @@
 						Franchise
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Become a Franchise</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/franchise'); ?>">Become a Franchisee</a></li>
 						<li><a class="dropdown-item" href="#">Franchise Intranet</a></li>
 						<li><a class="dropdown-item" href="#">Channel Partner</a></li>
 					</ul>

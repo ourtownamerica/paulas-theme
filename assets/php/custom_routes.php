@@ -1,44 +1,62 @@
 <?php
 
 function add_rewrite_rules() {
-    add_rewrite_rule('^about/?$', 'index.php?custom_about_page=1', 'top');
-	add_rewrite_rule('^contact-us-corp/?$', 'index.php?custom_contact_corp_page=1', 'top');
-	add_rewrite_rule('^contact-us/?$', 'index.php?custom_contact_corp_page=1', 'top');
-	add_rewrite_rule('^advertise-local/?$', 'index.php?advertise_local=1', 'top');
+	$slugs = [
+		'about' => 'custom_about_page',
+		'contact-us-corp' => 'custom_contact_corp_page',
+		'contact-us' => 'custom_contact_corp_page',
+		'advertise-local' => 'advertise_local',
+		'new-mover-marketing' => 'new_mover_marketing',
+		'new-movers' => 'new_mover_marketing',
+		'franchise' => 'franchise'
+	];
+	foreach($slugs as $slug=>$var){
+		add_rewrite_rule('^'.$slug.'/?$', 'index.php?'.$var.'=1', 'top');
+	}
 }
 
 function add_custom_query_vars($vars) {
-    $vars[] = 'custom_about_page';
-	$vars[] = 'custom_contact_corp_page';
-	$vars[] = 'advertise_local';
+	$custom_vars = [
+		'custom_about_page',
+		'custom_contact_corp_page',
+		'advertise_local',
+		'new_mover_marketing',
+		'franchise'
+	];
+	foreach($custom_vars as $var){
+		$vars[] = $var;
+	}
     return $vars;
 }
 
 function load_custom_templates($template) {
-    if (get_query_var('custom_about_page')) {
-        return TEMPLATE_DIR . '/about.php';
-    }
-	if (get_query_var('custom_contact_corp_page')) {
-        return TEMPLATE_DIR . '/contact-us-corp.php';
-    }
-	if (get_query_var('advertise_local')) {
-        return TEMPLATE_DIR . '/advertise-local.php';
-    }
+	$template_map = [
+		'custom_about_page' => 'about.php',
+		'custom_contact_corp_page' => 'contact-us-corp.php',
+		'advertise_local' => 'advertise-local.php',
+		'new_mover_marketing' => 'new-mover-marketing.php',
+		'franchise' => 'franchise.php'
+	];
+	foreach($template_map as $var=>$page){
+		if (get_query_var($var)) {
+			return TEMPLATE_DIR . '/' . $page;
+		}
+	}
     return $template;
 }
 
 function prevent_page_creation($data, $postarr) {
-    if ($data['post_type'] === 'page' && $data['post_name'] === 'about') {
-        wp_die('The slug "about" is reserved for a static page in the theme.');
-    }
-	if ($data['post_type'] === 'page' && $data['post_name'] === 'contact-us-corp') {
-        wp_die('The slug "contact-us-corp" is reserved for a static page in the theme.');
-    }
-	if ($data['post_type'] === 'page' && $data['post_name'] === 'contact-us') {
-        wp_die('The slug "contact-us" is reserved for a static page in the theme.');
-    }
-	if ($data['post_type'] === 'page' && $data['post_name'] === 'advertise-local') {
-        wp_die('The slug "advertise-local" is reserved for a static page in the theme.');
+	$blacklist = [
+		'about',
+		'contact-us-corp',
+		'contact-us',
+		'advertise-local',
+		'new-movers',
+		'new-mover-marketing',
+		'franchise'
+	];
+    if ($data['post_type'] === 'page' && in_array($data['post_name'], $blacklist)) {
+        wp_die('The slug "'.$data['post_name'].'" is reserved for a static page in the theme.');
     }
     return $data;
 }

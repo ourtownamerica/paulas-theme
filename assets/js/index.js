@@ -288,3 +288,36 @@ async function loadGoogleMaps() {
 		script.onerror = () => reject(new Error('Failed to load Google Maps script'));
 	});
 }
+
+const review_carousel_track = document.getElementById('review-carousel-track');
+if(review_carousel_track) jQuery(function($) {
+	$(review_carousel_track).slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		autoplay: true,
+		centerMode: false,
+		prevArrow: `<span class='slick-prev text-forest'><i class="fas fa-chevron-left"></i></span>`,
+		nextArrow: `<span class='slick-next text-forest'><i class="fas fa-chevron-right"></i></span>`,
+		responsive: [{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 3,
+			}
+		},{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 2
+			}
+		},{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1
+			}
+		}]
+	});
+
+	AOS.refresh();
+});

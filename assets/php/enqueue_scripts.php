@@ -14,9 +14,15 @@ function paulas_theme_enqueue_scripts() {
 	$aosjs_path = TEMPLATE_DIR_URI.'/assets/js/aos.js';
 	wp_enqueue_script('aos-js', $aosjs_path, [], @filemtime($aosjs_path), true);
 
+	wp_enqueue_script('jquery');
+
+	// Load aos js on every page
+	$slickjs_path = TEMPLATE_DIR_URI.'/assets/js/slick.min.js';
+	wp_enqueue_script('slick-js', $slickjs_path, ['jquery'], @filemtime($slickjs_path), true);
+
 	// Load main js on every page
 	$mainjs_path = TEMPLATE_DIR_URI.'/assets/js/index.js';
-	wp_enqueue_script('index-js', $mainjs_path, ['bootstrap-js', 'aos-js'], @filemtime($mainjs_path), true);
+	wp_enqueue_script('index-js', $mainjs_path, ['bootstrap-js', 'aos-js', 'jquery', 'slick-js'], @filemtime($mainjs_path), true);
 	wp_localize_script('index-js', 'wpData', [
 		'templateUrl' => TEMPLATE_DIR_URI
 	]);

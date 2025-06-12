@@ -356,3 +356,31 @@ body.pt h1,body.pt h2,body.pt h3,body.pt h4,body.pt h5,body.pt h6{
 .gm-style-iw button.gm-ui-hover-effect {
 	display: none !important;
 }
+
+.slick-prev, .slick-next{
+	color: rgb(11, 75, 58) !important;
+	font-size: 30px;
+	top: calc(50% - 20px);
+	z-index: 999;
+}
+
+.slick-dots li button::before{
+	font-size: 0;
+}
+
+.slick-dots li{
+	background-color: rgb(11, 75, 58) !important;
+	border-radius: 999;
+}
+
+.bigcirclecheck{
+	font-size: 350%;
+	text-align:center;
+	color: rgb(11, 75, 58);
+}
+
+.mdcirclecheck{
+	font-size: 150%;
+	text-align:center;
+	color: rgb(11, 75, 58);
+}

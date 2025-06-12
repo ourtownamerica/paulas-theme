@@ -18,7 +18,7 @@
 		<div class="row">
 			<div class="col-md-3">
 				<b class="d-block mb-2">SERVICES</b>
-				<a class="d-block mb-2" href="#">New Mover Marketing</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/new-mover-marketing'); ?>">New Mover Marketing</a>
 				<a class="d-block mb-2" href="#">Birthday Program</a>
 				<a class="d-block mb-2" href="#">EDDM Postcard</a>
 				<a class="d-block mb-2" href="#">Targeted Postcard</a>
@@ -38,7 +38,7 @@
 			</div>
 			<div class="col-md-3">
 				<b class="d-block mb-2">FRANCHISE</b>
-				<a class="d-block mb-2" href="#">Become a Franchise</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/franchise'); ?>">Become a Franchisee</a>
 				<a class="d-block mb-2" href="#">Franchise Intranet</a>
 				<a class="d-block mb-4" href="#">Channel Partner</a>
 

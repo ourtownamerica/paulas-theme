@@ -22,6 +22,14 @@ function paulas_theme_enqueue_styles(){
 	$aos_path = TEMPLATE_DIR_URI.'/assets/css/aos.css';
 	wp_enqueue_style('aos', $aos_path, [], @filemtime($aos_path));
 
+	// Load slick css
+	$slick_path = TEMPLATE_DIR_URI.'/assets/css/slick.css';
+	wp_enqueue_style('slick', $slick_path, [], @filemtime($slick_path));
+
+	// Load slick css
+	$slick_theme_path = TEMPLATE_DIR_URI.'/assets/css/slick-theme.css';
+	wp_enqueue_style('slick-theme', $slick_theme_path, ['slick'], @filemtime($slick_theme_path));
+
 	// Load main theme css
 	$theme_path = TEMPLATE_DIR_URI.'/assets/css/paulas_theme.css';
 	wp_enqueue_style('paulas_theme', $theme_path, ['bootstrap', 'fonts'], @filemtime($theme_path));

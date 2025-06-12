@@ -10,7 +10,7 @@
 					<hr class="gold-hr mb-3" />
 					<h3 class="text-forest">New Mover Marketing</h3>
 					<p>Reach new residents as they settle in and search for local favorites.</p>
-					<a href='#' class="btn hover-leaf btn-forest w-100">LEARN MORE</a>
+					<a href='<?php echo home_url('/new-mover-marketing'); ?>' class="btn hover-leaf btn-forest w-100">LEARN MORE</a>
 				</div>
 			</div>
 
