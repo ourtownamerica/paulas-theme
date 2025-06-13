@@ -8,7 +8,8 @@ function add_rewrite_rules() {
 		'advertise-local' => 'advertise_local',
 		'new-mover-marketing' => 'new_mover_marketing',
 		'new-movers' => 'new_mover_marketing',
-		'franchise' => 'franchise'
+		'franchise' => 'franchise',
+		'blog' => 'blog'
 	];
 	foreach($slugs as $slug=>$var){
 		add_rewrite_rule('^'.$slug.'/?$', 'index.php?'.$var.'=1', 'top');
@@ -21,7 +22,8 @@ function add_custom_query_vars($vars) {
 		'custom_contact_corp_page',
 		'advertise_local',
 		'new_mover_marketing',
-		'franchise'
+		'franchise',
+		'blog'
 	];
 	foreach($custom_vars as $var){
 		$vars[] = $var;
@@ -35,7 +37,8 @@ function load_custom_templates($template) {
 		'custom_contact_corp_page' => 'contact-us-corp.php',
 		'advertise_local' => 'advertise-local.php',
 		'new_mover_marketing' => 'new-mover-marketing.php',
-		'franchise' => 'franchise.php'
+		'franchise' => 'franchise.php',
+		'blog' => 'blog-posts.php'
 	];
 	foreach($template_map as $var=>$page){
 		if (get_query_var($var)) {
@@ -53,7 +56,8 @@ function prevent_page_creation($data, $postarr) {
 		'advertise-local',
 		'new-movers',
 		'new-mover-marketing',
-		'franchise'
+		'franchise',
+		'blog'
 	];
     if ($data['post_type'] === 'page' && in_array($data['post_name'], $blacklist)) {
         wp_die('The slug "'.$data['post_name'].'" is reserved for a static page in the theme.');

@@ -114,7 +114,7 @@ function render_industry_meta_box($post) {
 	<br>
 
 	<h6>Industry Description</h6>
-	<p><b>A few sentances or paragraphs about how OTA can benefit compnaies in this industry.</b></p>
+	<p><b>A few sentences or paragraphs about how OTA can benefit compnaies in this industry.</b></p>
 	<?php
 	$editor_settings = array(
 		'textarea_name' => 'industry_description', // The name of the textarea input field

@@ -43,7 +43,7 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="<?php echo home_url('/franchise'); ?>">Become a Franchisee</a></li>
-						<li><a class="dropdown-item" href="#">Franchise Intranet</a></li>
+						<li><a class="dropdown-item" href="https://rockwell.ourtownamerica.com/intra/">Franchise Intranet</a></li>
 						<li><a class="dropdown-item" href="#">Channel Partner</a></li>
 					</ul>
 				</li>
@@ -58,7 +58,7 @@
 						<li><a class="dropdown-item" href="#">Case Studies</a></li>
 						<li><a class="dropdown-item" href="#">Events</a></li>
 						<li><a class="dropdown-item" href="#">In the News</a></li>
-						<li><a class="dropdown-item" href="#">Blog</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/blog'); ?>">Blog</a></li>
 						<li><a class="dropdown-item" href="#">New Mover Survey</a></li>
 					</ul>
 				</li>

@@ -19,7 +19,7 @@
 
 		<?php get_template_part('assets/template-parts/franchise/intranet-login'); ?>
 
-		<?php get_template_part('assets/template-parts/contact-us/contact-us'); ?>
+		<?php get_template_part('assets/template-parts/contact-us/zee-contact-us'); ?>
 
 		<?php get_template_part('assets/template-parts/footer-nav'); ?>
 

@@ -27,4 +27,8 @@ function paulas_theme_enqueue_scripts() {
 		'templateUrl' => TEMPLATE_DIR_URI
 	]);
 
+	// Load admin js on admin pages
+	$admin_js = TEMPLATE_DIR_URI.'/assets/js/admin.js';
+	wp_enqueue_script('my-admin-js', $admin_js, [], null, true);
+
 }

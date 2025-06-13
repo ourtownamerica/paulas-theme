@@ -50,6 +50,36 @@ function register_custom_post_types() {
 		'menu_icon' => 'dashicons-businesswoman'
 	]);
 
+	// Register the Event post types
+	register_post_type('event', [
+		'labels' => [
+			'name' => 'Events',
+			'singular_name' => 'Event',
+			'add_new' => 'Add Event',
+			'add_new_item' => 'Add Event',
+			'edit_item' => 'Edit Event',
+			'new_item' => 'New Event',
+			'view_item' => 'View Event Page',
+			'search_items' => 'Search Events',
+			'not_found' => 'No events found',
+			'not_found_in_trash' => 'No events found in Trash',
+			'all_items' => 'All Events',
+			'archives' => 'Event Archives',
+			'item_published' => 'Event Published'
+		],
+		'description' => 'Our Town America Featured Events.',
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => ['slug' => 'events'],
+		'show_in_rest' => true,
+		'supports' => [],
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'menu_icon' => 'dashicons-calendar-alt'
+	]);
+
+	remove_post_type_support('event', 'title');
+    remove_post_type_support('event', 'editor');
 	remove_post_type_support('industry', 'title');
     remove_post_type_support('industry', 'editor');
 	remove_post_type_support('team', 'title');

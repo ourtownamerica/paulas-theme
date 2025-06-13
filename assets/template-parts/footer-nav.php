@@ -39,7 +39,7 @@
 			<div class="col-md-3">
 				<b class="d-block mb-2">FRANCHISE</b>
 				<a class="d-block mb-2" href="<?php echo home_url('/franchise'); ?>">Become a Franchisee</a>
-				<a class="d-block mb-2" href="#">Franchise Intranet</a>
+				<a class="d-block mb-2" href="https://rockwell.ourtownamerica.com/intra/">Franchise Intranet</a>
 				<a class="d-block mb-4" href="#">Channel Partner</a>
 
 				<b class="d-block mb-2">RESOURCES</b>
@@ -47,7 +47,7 @@
 				<a class="d-block mb-2" href="#">Case Studies</a>
 				<a class="d-block mb-2" href="#">Events</a>
 				<a class="d-block mb-2" href="#">In the News</a>
-				<a class="d-block mb-2" href="#">Blog</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/blog'); ?>">Blog</a>
 				<a class="d-block mb-4" href="#">New Mover Survey</a>
 			</div>
 			<div class="col-md-3">
