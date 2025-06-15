@@ -23,6 +23,10 @@ body.pt p{
 	border-radius: 1em;
 }
 
+.bg-gold{
+	background-color: rgb(228,179,82);
+}
+
 .text-gold{
 	color: rgb(228,179,82);
 }
@@ -432,7 +436,7 @@ a.blogfilterlink:hover, a.blogfilterlink.activecat {
 	color: rgb(11, 75, 58);
 }
 
-.post-thumb{
+.post-thumb, .event-thumb{
 	height: 200px;
 	background-size: cover;
 	background-position: center;
