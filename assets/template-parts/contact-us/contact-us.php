@@ -41,7 +41,7 @@
 
 			</div>
 			<div class="col-md-6" data-aos="fade-up-left">
-				<form class="contact-us-form">
+				<form id="contact-us-form">
 					<div class="d-none alert alert-danger" id="contact-us-form-error"></div>
 					<div class="d-none alert alert-success" id="contact-us-form-success"></div>
 
