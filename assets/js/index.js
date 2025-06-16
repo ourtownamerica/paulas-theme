@@ -311,14 +311,14 @@ if(contact_us_form){
 	let error_div = document.getElementById('contact-us-form-error');
 	let success_div = document.getElementById('contact-us-form-success');
 
-	contact_us_form.addEventListener('submit', function(e){
+	contact_us_form.addEventListener('submit', async function(e){
 		e.preventDefault();
 		if(submitting) return;
 		submitting = true;
 
 		error_div.classList.add('d-none');
 		success_div.classList.add('d-none');
-\
+
 		let res = await fetch('https://rockwell.ourtownamerica.com/intra/api/website/index.php', {
 			method: 'POST',
 			headers: {'Content-Type': 'application/json'},
