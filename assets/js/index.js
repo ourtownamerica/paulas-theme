@@ -271,6 +271,79 @@ if(zee_map) (async ()=>{
 
 })();
 
+let subscribe_footer_form = document.getElementById('subscribe-footer');
+if(subscribe_footer_form){
+	let submitting = false;
+	let error_div = document.getElementById('subscribe-footer-error');
+	let success_div = document.getElementById('subscribe-footer-success');
+	subscribe_footer_form.addEventListener('submit', async function(e){
+		e.preventDefault();
+		if(submitting) return;
+		submitting = true;
+		error_div.classList.add('d-none');
+		success_div.classList.add('d-none');
+		let email = document.getElementById('subscribe-footer-email').value.trim();
+		let res = await fetch('https://robert-prod.ourtownamerica.com/intra/api/website/index.php', {
+			method: 'POST',
+			headers: {'Content-Type': 'application/json'},
+			body: JSON.stringify({action: 'subscribe', email})
+		}).then(r => r.json());
+		if(res?.has_error){
+			error_div.innerHTML = res.message;
+			error_div.classList.remove('d-none');
+			submitting = false;
+		}else{
+			success_div.innerHTML = `You're subscribed!`;
+			success_div.classList.remove('d-none');
+		}
+	});
+}
+
+let contact_us_form = document.getElementById('contact-us-form');
+if(contact_us_form){
+	let submitting = false;
+	let firstname = document.getElementById('contact-us-form-first-name');
+	let lastname = document.getElementById('contact-us-form-last-name');
+	let company = document.getElementById('contact-us-form-company-name');
+	let zip = document.getElementById('contact-us-form-zip-code');
+	let phone = document.getElementById('contact-us-form-phone');
+	let email = document.getElementById('contact-us-form-email');
+	let error_div = document.getElementById('contact-us-form-error');
+	let success_div = document.getElementById('contact-us-form-success');
+
+	contact_us_form.addEventListener('submit', function(e){
+		e.preventDefault();
+		if(submitting) return;
+		submitting = true;
+
+		error_div.classList.add('d-none');
+		success_div.classList.add('d-none');
+\
+		let res = await fetch('https://rockwell.ourtownamerica.com/intra/api/website/index.php', {
+			method: 'POST',
+			headers: {'Content-Type': 'application/json'},
+			body: JSON.stringify({
+				action: "contact-lead",
+				first: firstname.value.trim(),
+				last: lastname.value.trim(),
+				company: company.value.trim(),
+				zip: zip.value.trim(),
+				phone: phone.value.trim(),
+				email: email.value.trim()
+			})
+		}).then(r => r.json());
+		if(res?.has_error){
+			error_div.innerHTML = res.message;
+			error_div.classList.remove('d-none');
+			submitting = false;
+		}else{
+			success_div.innerHTML = `Someone will be in touch soon!`;
+			success_div.classList.remove('d-none');
+		}
+
+	});
+}
+
 async function loadGoogleMaps() {
 	if (document.getElementById('google-maps-script')) return;
 

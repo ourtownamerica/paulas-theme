@@ -8,10 +8,14 @@
 				<div class="text-center mb-2">
 					Subscribe to our newsletter<br />and get notified about our latest news and updates
 				</div>
-				<div class="input-group mb-3">
-					<input type="text" class="form-control" placeholder="Your Email" aria-label="Your Email" aria-describedby="subscribe-addon-btn">
-					<button class="btn btn-gold" type="button" id="subscribe-addon-btn">Subscribe</button>
-				</div>
+				<form id="subscribe-footer">
+					<div class="alert alert-danger d-none" id="subscribe-footer-error"></div>
+					<div class="alert alert-success d-none" id="subscribe-footer-success"></div>
+					<div class="input-group mb-3">
+						<input id='subscribe-footer-email' type="text" class="form-control" placeholder="Your Email" aria-label="Your Email" aria-describedby="subscribe-addon-btn">
+						<button class="btn btn-gold" type="submit" id="subscribe-addon-btn">Subscribe</button>
+					</div>
+				</form>
 			</div>
 		</div>
 		<hr class="white-hr" />
@@ -19,36 +23,36 @@
 			<div class="col-md-3">
 				<b class="d-block mb-2">SERVICES</b>
 				<a class="d-block mb-2" href="<?php echo home_url('/new-mover-marketing'); ?>">New Mover Marketing</a>
-				<a class="d-block mb-2" href="#">Birthday Program</a>
-				<a class="d-block mb-2" href="#">EDDM Postcard</a>
-				<a class="d-block mb-2" href="#">Targeted Postcard</a>
-				<a class="d-block mb-4" href="#">Digital Marketing</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/birthday-program'); ?>">Birthday Program</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/every-door-direct-mail'); ?>">EDDM Postcard</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/targeted-postcard'); ?>">Targeted Postcard</a>
+				<a class="d-block mb-4" href="<?php echo home_url('/digital-marketing'); ?>">Digital Marketing</a>
 
 				<a class="d-block mb-4" href="<?php echo home_url('/about'); ?>"><b class="d-block">ABOUT US</b></a>
 			</div>
 			<div class="col-md-3">
 				<b class="d-block mb-2">INDUSTRY FOCUS</b>
-				<a class="d-block mb-2" href="#">Automotive</a>
-				<a class="d-block mb-2" href="#">Dental</a>
-				<a class="d-block mb-2" href="#">Hair Salons</a>
-				<a class="d-block mb-2" href="#">Pet Care</a>
-				<a class="d-block mb-2" href="#">Pizzarias</a>
-				<a class="d-block mb-2" href="#">Supermarket</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/industries/automotive/'); ?>">Automotive</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/industries/dental/'); ?>">Dental</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/industries/hair-salons/'); ?>">Hair Salons</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/industries/pet-care/'); ?>">Pet Care</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/industries/pizzarias/'); ?>">Pizzarias</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/industries/supermarket/'); ?>">Supermarket</a>
 				<a class="d-block mb-4" href="<?php echo home_url('/industries'); ?>">...And More</a>
 			</div>
 			<div class="col-md-3">
 				<b class="d-block mb-2">FRANCHISE</b>
 				<a class="d-block mb-2" href="<?php echo home_url('/franchise'); ?>">Become a Franchisee</a>
 				<a class="d-block mb-2" href="https://rockwell.ourtownamerica.com/intra/">Franchise Intranet</a>
-				<a class="d-block mb-4" href="#">Channel Partner</a>
+				<a class="d-block mb-4" href="<?php echo home_url('/channel-partner'); ?>">Channel Partner</a>
 
 				<b class="d-block mb-2">RESOURCES</b>
-				<a class="d-block mb-2" href="#">Testimonials</a>
-				<a class="d-block mb-2" href="#">Case Studies</a>
-				<a class="d-block mb-2" href="#">Events</a>
-				<a class="d-block mb-2" href="#">In the News</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/testimonials'); ?>">Testimonials</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/case-studies'); ?>">Case Studies</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/events'); ?>">Events</a>
+				<a class="d-block mb-2" href="<?php echo home_url('/in-the-news'); ?>">In the News</a>
 				<a class="d-block mb-2" href="<?php echo home_url('/blog'); ?>">Blog</a>
-				<a class="d-block mb-4" href="#">New Mover Survey</a>
+				<a class="d-block mb-4" href="<?php echo home_url('/survey'); ?>">New Mover Survey</a>
 			</div>
 			<div class="col-md-3">
 				<b class="d-block mb-2">CONTACT US</b>
@@ -74,7 +78,7 @@
 				&copy <?php echo date('Y'); ?> Our Town America | All Rights Reserved
 			</small>
 			<small class="float-end text-end">
-				<a href="#">Terms of Use</a> | <a href="#">Legal</a> | <a href="#">Privacy Policy</a>
+				<a href="<?php echo home_url('/privacy-policy'); ?>">Privacy Policy</a>
 			</small>
 			<div class="clearfix"></div>
 		</div>

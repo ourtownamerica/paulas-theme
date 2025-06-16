@@ -25,18 +25,20 @@
 			</div>
 			<div class="col-md-6" data-aos="fade-up-left">
 				<form class="contact-us-form">
+					<div class="d-none alert alert-danger" id="contact-us-form-error"></div>
+					<div class="d-none alert alert-success" id="contact-us-form-success"></div>
 					
 					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="First Name*">
 
-					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="Last Name*">
+					<input type="text" class="form-control mb-3" id="contact-us-form-last-name" placeholder="Last Name*">
 
-					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="Company Name*">
+					<input type="text" class="form-control mb-3" id="contact-us-form-company-name" placeholder="Company Name*">
 
-					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="Company Zipcode*">
+					<input type="text" class="form-control mb-3" id="contact-us-form-zip-code" placeholder="Company Zipcode*">
 
-					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="Phone Number">
+					<input type="text" class="form-control mb-3" id="contact-us-form-phone" placeholder="Phone Number">
 
-					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="Email">
+					<input type="text" class="form-control mb-3" id="contact-us-form-email" placeholder="Email">
 
 					<button type="submit" class="btn btn-gold px-5 py-2 my-1">GET STARTED</button>
 

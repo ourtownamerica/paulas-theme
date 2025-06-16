@@ -8,8 +8,18 @@ function add_rewrite_rules() {
 		'advertise-local' => 'advertise_local',
 		'new-mover-marketing' => 'new_mover_marketing',
 		'new-movers' => 'new_mover_marketing',
+		'birthday-program' => 'birthday_program',
 		'franchise' => 'franchise',
-		'blog' => 'blog'
+		'blog' => 'blog',
+		'every-door-direct-mail' => 'eddm',
+		'targeted-postcard' => 'targeted_postcard',
+		'digital-marketing' => 'digital_marketing',
+		'channel-partner' => 'channel_partner',
+		'testimonials' => 'testimonials',
+		'case-studies' => 'case_studies',
+		'in-the-news' => 'in_the_news',
+		'survey' => 'survey',
+		'privacy-policy' => 'privacy_policy'
 	];
 	foreach($slugs as $slug=>$var){
 		add_rewrite_rule('^'.$slug.'/?$', 'index.php?'.$var.'=1', 'top');
@@ -23,7 +33,17 @@ function add_custom_query_vars($vars) {
 		'advertise_local',
 		'new_mover_marketing',
 		'franchise',
-		'blog'
+		'blog',
+		'birthday_program',
+		'eddm',
+		'targeted_postcard',
+		'digital_marketing',
+		'channel_partner',
+		'testimonials',
+		'case_studies',
+		'in_the_news',
+		'survey',
+		'privacy_policy'
 	];
 	foreach($custom_vars as $var){
 		$vars[] = $var;
@@ -38,7 +58,17 @@ function load_custom_templates($template) {
 		'advertise_local' => 'advertise-local.php',
 		'new_mover_marketing' => 'new-mover-marketing.php',
 		'franchise' => 'franchise.php',
-		'blog' => 'blog-posts.php'
+		'blog' => 'blog-posts.php',
+		'birthday_program' => 'birthday-program.php',
+		'eddm' => 'every-door-direct-mail.php',
+		'targeted_postcard' => 'targeted-postcard.php',
+		'digital_marketing' => 'digital-marketing.php',
+		'channel_partner' => 'channel-partner.php',
+		'testimonials' => 'testimonials.php',
+		'case_studies' => 'case-studies.php',
+		'in_the_news' => 'in-the-news.php',
+		'survey' => 'survey.php',
+		'privacy_policy' => 'privacy-policy.php'
 	];
 	foreach($template_map as $var=>$page){
 		if (get_query_var($var)) {
@@ -57,7 +87,17 @@ function prevent_page_creation($data, $postarr) {
 		'new-movers',
 		'new-mover-marketing',
 		'franchise',
-		'blog'
+		'blog',
+		'birthday-program',
+		'every-door-direct-mail',
+		'targeted-postcard',
+		'digital-marketing',
+		'channel-partner',
+		'testimonials',
+		'case-studies',
+		'in-the-news',
+		'survey',
+		'privacy-policy'
 	];
     if ($data['post_type'] === 'page' && in_array($data['post_name'], $blacklist)) {
         wp_die('The slug "'.$data['post_name'].'" is reserved for a static page in the theme.');

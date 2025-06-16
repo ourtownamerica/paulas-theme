@@ -3,38 +3,40 @@
 		<h6 class="sm-header text-center">BECOME A FRANCHISEE</h6>
 		<h1 class="text-forest mx-auto short-header text-center">Ready to Make a Difference in Your Community?<br>Get started today!</h1>
 
-		<form class="contact-us-form">
+		<form class="zee-contact-us-form">
+			<div class="d-none alert alert-danger" id="zee-contact-us-form-error"></div>
+			<div class="d-none alert alert-success" id="zee-contact-us-form-success"></div>
 
 			<div class="row">
 				<div class="col-md-6" data-aos="fade-up-right">
-					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="First Name*">
+					<input type="text" class="form-control mb-3" id="zee-contact-us-form-first-name" placeholder="First Name*">
 				</div>
 				<div class="col-md-6" data-aos="fade-up-left">
-					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="Last Name*">
+					<input type="text" class="form-control mb-3" id="zee-contact-us-form-last-name" placeholder="Last Name*">
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-6" data-aos="fade-up-right">
-					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="Email">
+					<input type="text" class="form-control mb-3" id="zee-contact-us-form-email" placeholder="Email">
 				</div>
 				<div class="col-md-6" data-aos="fade-up-left">
-					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="Phone Number">
+					<input type="text" class="form-control mb-3" id="zee-contact-us-form-phone" placeholder="Phone Number">
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-6" data-aos="fade-up-right">
-					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="Desired Territory">
+					<input type="text" class="form-control mb-3" id="zee-contact-us-form-territory" placeholder="Desired Territory">
 				</div>
 				<div class="col-md-6" data-aos="fade-up-left">
-					<input type="text" class="form-control mb-3" id="contact-us-form-first-name" placeholder="How did you hear of Our Town America?">
+					<input type="text" class="form-control mb-3" id="zee-contact-us-form-reference" placeholder="How did you hear of Our Town America?">
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col" data-aos="fade-up">
-					<textarea class="form-control mb-3" id="contact-us-form-first-name" placeholder="Message"></textarea>
+					<textarea class="form-control mb-3" id="zee-contact-us-form-message" placeholder="Message"></textarea>
 				</div>
 			</div>
 			

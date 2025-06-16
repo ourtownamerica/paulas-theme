@@ -15,10 +15,10 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="<?php echo home_url('/new-mover-marketing'); ?>">New Mover Marketing</a></li>
-						<li><a class="dropdown-item" href="#">Birthday Program</a></li>
-						<li><a class="dropdown-item" href="#">EDDM Postcard</a></li>
-						<li><a class="dropdown-item" href="#">Targeted Postcard</a></li>
-						<li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/birthday-program'); ?>">Birthday Program</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/every-door-direct-mail'); ?>">EDDM Postcard</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/targeted-postcard'); ?>">Targeted Postcard</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/digital-marketing'); ?>">Digital Marketing</a></li>
 					</ul>
 				</li>	
 
@@ -27,12 +27,12 @@
 						Industry Focus
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Automotive</a></li>
-						<li><a class="dropdown-item" href="#">Dental</a></li>
-						<li><a class="dropdown-item" href="#">Hair Salons</a></li>
-						<li><a class="dropdown-item" href="#">Pet Care</a></li>
-						<li><a class="dropdown-item" href="#">Pizzarias</a></li>
-						<li><a class="dropdown-item" href="#">Supermarket</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/industries/automotive/'); ?>">Automotive</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/industries/dental/'); ?>">Dental</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/industries/hair-salons/'); ?>">Hair Salons</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/industries/pet-care/'); ?>">Pet Care</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/industries/pizzarias/'); ?>">Pizzarias</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/industries/supermarket/'); ?>">Supermarket</a></li>
 						<li><a class="dropdown-item" href="<?php echo home_url('/industries'); ?>">...And More</a></li>
 					</ul>
 				</li>
@@ -44,7 +44,7 @@
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="<?php echo home_url('/franchise'); ?>">Become a Franchisee</a></li>
 						<li><a class="dropdown-item" href="https://rockwell.ourtownamerica.com/intra/">Franchise Intranet</a></li>
-						<li><a class="dropdown-item" href="#">Channel Partner</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/channel-partner'); ?>">Channel Partner</a></li>
 					</ul>
 				</li>
 
@@ -54,12 +54,12 @@
 						Resources
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Testimonials</a></li>
-						<li><a class="dropdown-item" href="#">Case Studies</a></li>
-						<li><a class="dropdown-item" href="#">Events</a></li>
-						<li><a class="dropdown-item" href="#">In the News</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/testimonials'); ?>">Testimonials</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/case-studies'); ?>">Case Studies</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/events'); ?>">Events</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/in-the-news'); ?>">In the News</a></li>
 						<li><a class="dropdown-item" href="<?php echo home_url('/blog'); ?>">Blog</a></li>
-						<li><a class="dropdown-item" href="#">New Mover Survey</a></li>
+						<li><a class="dropdown-item" href="<?php echo home_url('/survey'); ?>">New Mover Survey</a></li>
 					</ul>
 				</li>
 

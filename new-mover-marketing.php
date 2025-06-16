@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
-		<title>Our Town America &centerdot; Home</title>
+		<title>Our Town America &centerdot; New Mover Marketing</title>
 		<?php wp_head(); ?>
 	</head>
 	<body class="pt">
