@@ -126,7 +126,7 @@ if(samples_carousel){
 
 
 
-document.querySelectorAll('form.contact-us-form').forEach(form=>{
+document.querySelectorAll('form.zee-contact-us-form').forEach(form=>{
 	form.addEventListener('submit', e=>{
 		e.preventDefault();
 		alert('not implemented');
