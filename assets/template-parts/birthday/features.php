@@ -1,7 +1,7 @@
 <div class="bg-gray p-3 nmm-features pt-5">
 	<div class="container">
 		<h6 class="sm-header text-center">FEATURES &amp; BENEFITS</h6>
-		<h1 class="text-forest mx-auto short-header text-center">What's Included in the New Mover Marketing Program</h1>
+		<h1 class="text-forest mx-auto short-header text-center">Everything You Need to Turn Birthdays into Business</h1>
 
 		<div class="row">
 			<div class="col-md-8" data-aos="fade-up-right">
@@ -9,40 +9,40 @@
 				<div class="d-flex align-items-start mb-3">
 					<div class="circle-list-ind flex-shrink-0"><i class="fas fa-check"></i></div>
 					<div class="ps-3">
-						<div><b class="text-forest">Exclusing Category Placement</b></div>
-						Be the only business in your category reaching new movers in your zip code.
+						<div><b class="text-forest">Turnkey Execution</b></div>
+						We manage the data, print, and mailing.
 					</div>
 				</div>
 
 				<div class="d-flex align-items-start mb-3">
 					<div class="circle-list-ind flex-shrink-0"><i class="fas fa-check"></i></div>
 					<div class="ps-3">
-						<div><b class="text-forest">Verified New Mover Targeting</b></div>
-						Reach high-intent customers as they form new buying habits.
+						<div><b class="text-forest">Personalized Postcards</b></div>
+						Each card is custom printed with the customer’s name and your branded offer.
 					</div>
 				</div>
 
 				<div class="d-flex align-items-start mb-3">
 					<div class="circle-list-ind flex-shrink-0"><i class="fas fa-check"></i></div>
 					<div class="ps-3">
-						<div><b class="text-forest">Personalized, High-Quality Mailers</b></div>
-						Oversized, gift-like envelopes that get noticed and remembered.
+						<div><b class="text-forest">Targeted Mailing Windows</b></div>
+						Cards arrive just before the recipient’s birthday for maximum impact.
 					</div>
 				</div>
 
 				<div class="d-flex align-items-start mb-3">
 					<div class="circle-list-ind flex-shrink-0"><i class="fas fa-check"></i></div>
 					<div class="ps-3">
-						<div><b class="text-forest">Automated Mailing & Fulfillment</b></div>
-						We handle design, printing, delivery, and timing — no extra work for you.
+						<div><b class="text-forest">Proven Engagement</b></div>
+						Drive foot traffic and encourage repeat visits with an emotional connection.
 					</div>
 				</div>
 
 				<div class="d-flex align-items-start mb-3">
 					<div class="circle-list-ind flex-shrink-0"><i class="fas fa-check"></i></div>
 					<div class="ps-3">
-						<div><b class="text-forest">Real-Time Tracking with TruTrak®</b></div>
-						Monitor redemptions and ROI from your phone or desktop.
+						<div><b class="text-forest">Trackable Redemptions</b></div>
+						Optional features allow you to track campaign performance and ROI.
 					</div>
 				</div>
 				
@@ -51,7 +51,7 @@
 			</div>
 			<div class="col-md-4" data-aos="fade-up-left">
 				
-				<img src='<?php echo get_template_directory_uri()."/assets/images/certs-and-app.png"; ?>' class="img-fluid" />
+				<img src='<?php echo get_template_directory_uri()."/assets/images/bday-pc.png"; ?>' class="img-fluid" />
 
 			</div>
 		</div>

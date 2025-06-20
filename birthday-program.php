@@ -9,7 +9,17 @@
 
 		<?php get_template_part('assets/template-parts/top-nav'); ?>
 
-		<div class="container"><p>Placeholder page for: Birthday Program</p></div>
+		<?php get_template_part('assets/template-parts/birthday/main'); ?>
+
+		<?php get_template_part('assets/template-parts/birthday/overview'); ?>
+
+		<?php get_template_part('assets/template-parts/birthday/why'); ?>
+
+		<?php get_template_part('assets/template-parts/birthday/features'); ?>
+
+		<?php get_template_part('assets/template-parts/birthday/see-how'); ?>
+
+		<?php get_template_part('assets/template-parts/birthday/samples-carousel'); ?>
 
 		<?php get_template_part('assets/template-parts/contact-us/contact-us'); ?>
 

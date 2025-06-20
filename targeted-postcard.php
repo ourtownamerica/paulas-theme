@@ -9,7 +9,9 @@
 
 		<?php get_template_part('assets/template-parts/top-nav'); ?>
 
-		<div class="container"><p>Placeholder page for: Targeted Postcard</p></div>
+		<?php get_template_part('assets/template-parts/targeted-postcard/main'); ?>
+		
+		<?php get_template_part('assets/template-parts/targeted-postcard/overview'); ?>
 
 		<?php get_template_part('assets/template-parts/contact-us/contact-us'); ?>
 
