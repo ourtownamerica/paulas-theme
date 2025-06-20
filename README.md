@@ -40,4 +40,4 @@ Industry pages are dynamic, and are managed via the "Industries" link in the sid
  - `[ ]` All Employees need to be added via WP Dashboard
  - `[ ]` More Samples need to be added to the samples carousel (industry pages)
  - `[x]` Set up the "Subscribe" button
- - `[ ]` Set up the contact forms
+ - `[x]` Set up the contact forms
