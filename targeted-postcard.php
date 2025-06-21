@@ -10,8 +10,14 @@
 		<?php get_template_part('assets/template-parts/top-nav'); ?>
 
 		<?php get_template_part('assets/template-parts/targeted-postcard/main'); ?>
-		
+
 		<?php get_template_part('assets/template-parts/targeted-postcard/overview'); ?>
+
+		<?php get_template_part('assets/template-parts/targeted-postcard/why'); ?>
+
+		<?php get_template_part('assets/template-parts/targeted-postcard/features'); ?>
+
+		<?php get_template_part('assets/template-parts/targeted-postcard/samples-carousel'); ?>
 
 		<?php get_template_part('assets/template-parts/contact-us/contact-us'); ?>
 

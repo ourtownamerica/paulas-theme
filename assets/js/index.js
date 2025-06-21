@@ -1,9 +1,16 @@
 
-
+/****************************************************************************
+ * Initialize the animations
+ ****************************************************************************/
 AOS.init();
 
-const client_carousel = document.querySelector('.logo-carousel');
-if(client_carousel){
+
+/****************************************************************************
+ * Carousel of client logos
+ ****************************************************************************/
+(async (client_carousel)=>{
+	if(!client_carousel) return;
+
 	const logos = document.querySelectorAll('.client-logo');
 	const prevBtn = document.querySelector('.logo-carousel-wrapper .carousel-nav.prev');
 	const nextBtn = document.querySelector('.logo-carousel-wrapper .carousel-nav.next');
@@ -61,10 +68,16 @@ if(client_carousel){
 		client_carousel.style.transition = 'none';
 		client_carousel.style.transform = `translateX(-${scrollIndex * itemWidth}px)`;
 	});
-}
 
-const samples_carousel = document.querySelector('.samples-carousel');
-if(samples_carousel){
+})(document.querySelector('.logo-carousel'));
+
+
+/****************************************************************************
+ * Mailings samples carousel
+ ****************************************************************************/
+(async (samples_carousel)=>{
+	if(!samples_carousel) return;
+
 	const samples = document.querySelectorAll('.samples-carousel-img');
 	const prevBtn = document.querySelector('.samples-carousel-wrapper .carousel-nav.prev');
 	const nextBtn = document.querySelector('.samples-carousel-wrapper .carousel-nav.next');
@@ -122,36 +135,93 @@ if(samples_carousel){
 		samples_carousel.style.transition = 'none';
 		samples_carousel.style.transform = `translateX(-${scrollIndex * itemWidth}px)`;
 	});
-}
+
+})(document.querySelector('.samples-carousel'));
 
 
+/****************************************************************************
+ * "Become a Franchisee" contact form
+ ****************************************************************************/
+(async (forms)=>{
+	forms.forEach(form=>{
+		
+		let submitting = false;
+		let firstname = document.getElementById('zee-contact-us-form-first-name');
+		let lastname = document.getElementById('zee-contact-us-form-last-name');
+		let email = document.getElementById('zee-contact-us-form-email');
+		let phone = document.getElementById('zee-contact-us-form-phone');
+		let territory = document.getElementById('zee-contact-us-form-territory');
+		let reference = document.getElementById('zee-contact-us-form-reference');
+		let message = document.getElementById('zee-contact-us-form-message');
 
-document.querySelectorAll('form.zee-contact-us-form').forEach(form=>{
-	form.addEventListener('submit', e=>{
-		e.preventDefault();
-		alert('not implemented');
+		let error_div = document.getElementById('zee-contact-us-form-error');
+		let success_div = document.getElementById('zee-contact-us-form-success');
+
+		form.addEventListener('submit', async function(e){
+			e.preventDefault();
+			if(submitting) return;
+			submitting = true;
+
+			error_div.classList.add('d-none');
+			success_div.classList.add('d-none');
+
+			let res = await fetch('https://rockwell.ourtownamerica.com/intra/api/website/index.php', {
+				method: 'POST',
+				headers: {'Content-Type': 'application/json'},
+				body: JSON.stringify({
+					action: "contact-zee",
+					first: firstname.value.trim(),
+					last: lastname.value.trim(),
+					phone: phone.value.trim(),
+					email: email.value.trim(),
+					territory: territory.value.trim(),
+					reference: reference.value.trim(),
+					message: message.value.trim(),
+				})
+			}).then(r => r.json());
+			if(res?.has_error){
+				error_div.innerHTML = res.message;
+				error_div.classList.remove('d-none');
+				submitting = false;
+			}else{
+				success_div.innerHTML = `Someone will be in touch soon!`;
+				success_div.classList.remove('d-none');
+			}
+
+		});
+
+
 	});
-});
+})(document.querySelectorAll('form.zee-contact-us-form'));
 
-document.querySelectorAll('.topnavbar .dropdown').forEach(function (dropdown) {
-	dropdown.addEventListener('mouseenter', function () {
-		const toggle = this.querySelector('.dropdown-toggle');
-		const menu = this.querySelector('.dropdown-menu');
-		toggle.classList.add('show');
-		menu.classList.add('show');
+
+/****************************************************************************
+ * Open nav dropdowns on hover
+ ****************************************************************************/
+(async (dropdowns)=>{
+	dropdowns.forEach(function (dropdown) {
+		dropdown.addEventListener('mouseenter', function () {
+			const toggle = this.querySelector('.dropdown-toggle');
+			const menu = this.querySelector('.dropdown-menu');
+			toggle.classList.add('show');
+			menu.classList.add('show');
+		});
+
+		dropdown.addEventListener('mouseleave', function () {
+			const toggle = this.querySelector('.dropdown-toggle');
+			const menu = this.querySelector('.dropdown-menu');
+			toggle.classList.remove('show');
+			menu.classList.remove('show');
+		});
 	});
+})(document.querySelectorAll('.topnavbar .dropdown'));
 
-	dropdown.addEventListener('mouseleave', function () {
-		const toggle = this.querySelector('.dropdown-toggle');
-		const menu = this.querySelector('.dropdown-menu');
-		toggle.classList.remove('show');
-		menu.classList.remove('show');
-	});
-});
 
-// Contact us map
-let zee_map = document.getElementById('contact-us-map');
-if(zee_map) (async ()=>{
+/****************************************************************************
+ * Franchisee Google Map
+ ****************************************************************************/
+(async (zee_map)=>{
+	if(!zee_map) return;
 
 	await loadGoogleMaps();
 
@@ -268,11 +338,15 @@ if(zee_map) (async ()=>{
 			renderZee(getClosestZee(res.data.geocode.lat, res.data.geocode.lng));
 		}
 	});
+})(document.getElementById('contact-us-map'));
 
-})();
 
-let subscribe_footer_form = document.getElementById('subscribe-footer');
-if(subscribe_footer_form){
+/****************************************************************************
+ * Subscribe form in footer
+ ****************************************************************************/
+(async (subscribe_footer_form)=>{
+	if(!subscribe_footer_form) return;
+
 	let submitting = false;
 	let error_div = document.getElementById('subscribe-footer-error');
 	let success_div = document.getElementById('subscribe-footer-success');
@@ -297,10 +371,16 @@ if(subscribe_footer_form){
 			success_div.classList.remove('d-none');
 		}
 	});
-}
 
-let contact_us_form = document.getElementById('contact-us-form');
-if(contact_us_form){
+})(document.getElementById('subscribe-footer'));
+
+
+/****************************************************************************
+ * Contact at us form at bottom of most pages
+ ****************************************************************************/
+(async (contact_us_form)=>{
+	if(!contact_us_form) return;
+
 	let submitting = false;
 	let firstname = document.getElementById('contact-us-form-first-name');
 	let lastname = document.getElementById('contact-us-form-last-name');
@@ -342,8 +422,12 @@ if(contact_us_form){
 		}
 
 	});
-}
+})(document.getElementById('contact-us-form'));
 
+
+/****************************************************************************
+ * Helper function to load Google Maps if it is not loaded yet
+ ****************************************************************************/
 async function loadGoogleMaps() {
 	if (document.getElementById('google-maps-script')) return;
 
@@ -362,8 +446,16 @@ async function loadGoogleMaps() {
 	});
 }
 
-const review_carousel_track = document.getElementById('review-carousel-track');
-if(review_carousel_track) jQuery(function($) {
+
+/****************************************************************************
+ * Reviews carousel
+ ****************************************************************************/
+(async (review_carousel_track)=>{
+	if(!review_carousel_track) return;
+
+	// Load jQuery... yes, we need jQuery for this
+	const $ = await new Promise(jQuery);
+
 	$(review_carousel_track).slick({
 		dots: false,
 		infinite: true,
@@ -392,7 +484,55 @@ if(review_carousel_track) jQuery(function($) {
 		}]
 	});
 
+	// Refresh the animations library since the dom has changed
 	AOS.refresh();
-});
+
+})(document.getElementById('review-carousel-track'));
 
 
+/****************************************************************************
+ * Media Kit Form
+ ****************************************************************************/
+(async (contact_us_form)=>{
+	if(!contact_us_form) return;
+
+	let submitting = false;
+	let firstname = document.getElementById('mk-contact-us-form-first-name');
+	let lastname = document.getElementById('mk-contact-us-form-last-name');
+	let email = document.getElementById('mk-contact-us-form-email');
+	let error_div = document.getElementById('mk-contact-us-form-error');
+
+	let main_div = document.querySelector('.media-kit-main');
+	let form_div = document.querySelector('#contact-us-media-kit');
+	let download_div = document.querySelector('.media-kit-download');
+
+	contact_us_form.addEventListener('submit', async function(e){
+		e.preventDefault();
+		if(submitting) return;
+		submitting = true;
+
+		error_div.classList.add('d-none');
+
+		let res = await fetch('https://robert-prod.ourtownamerica.com/intra/api/website/index.php', {
+			method: 'POST',
+			headers: {'Content-Type': 'application/json'},
+			body: JSON.stringify({
+				action: 'media-kit', 
+				email: email.value.trim(), 
+				firstname: firstname.value.trim(), 
+				lastname: lastname.value.trim()
+			})
+		}).then(r => r.json());
+		if(res?.has_error){
+			error_div.innerHTML = res.message;
+			error_div.classList.remove('d-none');
+			submitting = false;
+		}else{
+			main_div.classList.add('d-none');
+			form_div.classList.add('d-none');
+			download_div.classList.remove('d-none');
+		}
+
+	});
+
+})(document.getElementById('mk-contact-us-form'));

@@ -19,7 +19,8 @@ function add_rewrite_rules() {
 		'case-studies' => 'case_studies',
 		'in-the-news' => 'in_the_news',
 		'survey' => 'survey',
-		'privacy-policy' => 'privacy_policy'
+		'privacy-policy' => 'privacy_policy',
+		'media-kit' => 'media_kit'
 	];
 	foreach($slugs as $slug=>$var){
 		add_rewrite_rule('^'.$slug.'/?$', 'index.php?'.$var.'=1', 'top');
@@ -43,7 +44,8 @@ function add_custom_query_vars($vars) {
 		'case_studies',
 		'in_the_news',
 		'survey',
-		'privacy_policy'
+		'privacy_policy',
+		'media_kit'
 	];
 	foreach($custom_vars as $var){
 		$vars[] = $var;
@@ -68,7 +70,8 @@ function load_custom_templates($template) {
 		'case_studies' => 'case-studies.php',
 		'in_the_news' => 'in-the-news.php',
 		'survey' => 'survey.php',
-		'privacy_policy' => 'privacy-policy.php'
+		'privacy_policy' => 'privacy-policy.php',
+		'media_kit' => 'media-kit.php'
 	];
 	foreach($template_map as $var=>$page){
 		if (get_query_var($var)) {
@@ -97,7 +100,8 @@ function prevent_page_creation($data, $postarr) {
 		'case-studies',
 		'in-the-news',
 		'survey',
-		'privacy-policy'
+		'privacy-policy',
+		'media-kit'
 	];
     if ($data['post_type'] === 'page' && in_array($data['post_name'], $blacklist)) {
         wp_die('The slug "'.$data['post_name'].'" is reserved for a static page in the theme.');

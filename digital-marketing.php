@@ -9,14 +9,19 @@
 
 		<?php get_template_part('assets/template-parts/top-nav'); ?>
 
-		<div class="container"><p>Placeholder page for: Digital Marketing</p></div>
+		<?php get_template_part('assets/template-parts/digital/main'); ?>
 
-		<?php get_template_part('assets/template-parts/contact-us/contact-us'); ?>
+		<?php get_template_part('assets/template-parts/digital/overview'); ?>
+
+		<?php get_template_part('assets/template-parts/digital/why'); ?>
+
+		<?php get_template_part('assets/template-parts/digital/features'); ?>
+
+		<?php get_template_part('assets/template-parts/contact-us/contact-us-white'); ?>
 
 		<?php get_template_part('assets/template-parts/footer-nav'); ?>
 
 		<?php wp_footer(); ?>
 
-		
 	</body>
 </html>

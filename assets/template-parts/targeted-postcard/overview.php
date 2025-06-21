@@ -11,7 +11,7 @@
 				<p class="text-forest"><b>No minimums. Let us know when to mail. We mail weekly and can schedule based on your timing.</b></p>
 			</div>
 			<div class="col-md-6">
-				<img src='<?php echo get_template_directory_uri()."/assets/images/freaky-birthday-ai-people.png"; ?>' class="img-fluid" />
+				<img src='<?php echo get_template_directory_uri()."/assets/images/mailbox-pc.png"; ?>' class="img-fluid" />
 			</div>
 		</div>
 		

@@ -8,10 +8,10 @@ Industry pages are dynamic, and are managed via the "Industries" link in the sid
 # Pages to Design/Build:
  - `[x]` [Home](https://newourtownamericasite.kinsta.cloud/)
  - `[x]` [New Mover Marketing](https://newourtownamericasite.kinsta.cloud/new-mover-marketing/)
- - `[ ]` [Birthday Program](https://newourtownamericasite.kinsta.cloud/birthday-program/)
- - `[ ]` [EDDM](https://newourtownamericasite.kinsta.cloud/every-door-direct-mail/)
- - `[ ]` [Targeted Postcard](https://newourtownamericasite.kinsta.cloud/targeted-postcard/)
- - `[ ]` [Digital Marketing](https://newourtownamericasite.kinsta.cloud/digital-marketing/)
+ - `[x]` [Birthday Program](https://newourtownamericasite.kinsta.cloud/birthday-program/)
+ - `[x]` [EDDM](https://newourtownamericasite.kinsta.cloud/every-door-direct-mail/)
+ - `[x]` [Targeted Postcard](https://newourtownamericasite.kinsta.cloud/targeted-postcard/)
+ - `[x]` [Digital Marketing](https://newourtownamericasite.kinsta.cloud/digital-marketing/)
  - `[ ]` [Industries](https://newourtownamericasite.kinsta.cloud/industries/)
  - `[ ]` [Channel Partner](https://newourtownamericasite.kinsta.cloud/channel-partner/)
  - `[x]` [Single Industry](https://newourtownamericasite.kinsta.cloud/industries/restaurants/)
@@ -28,6 +28,7 @@ Industry pages are dynamic, and are managed via the "Industries" link in the sid
  - `[ ]` [In the News](https://newourtownamericasite.kinsta.cloud/in-the-news/)
  - `[ ]` [New Mover Survey](https://newourtownamericasite.kinsta.cloud/survey/)
  - `[x]` [Privacy Policy](https://newourtownamericasite.kinsta.cloud/privacy-policy/)
+ - `[x]` [Media Kit](https://newourtownamericasite.kinsta.cloud/media-kit/)
 
 # To Do
  - `[ ]` All industry pages need to be created via WP Dashboard, at *minimum*:
@@ -38,6 +39,9 @@ Industry pages are dynamic, and are managed via the "Industries" link in the sid
 	 - `[ ]` Pizzarias
 	 - `[ ]` Supermarkets
  - `[ ]` All Employees need to be added via WP Dashboard
- - `[ ]` More Samples need to be added to the samples carousel (industry pages)
+ - `[ ]` More Samples need to be added to the samples carousel (industry pages, and elsewhere)
  - `[x]` Set up the "Subscribe" button
  - `[x]` Set up the contact forms
+ - `[ ]` Need specific Constant Contact list ID for the Media Kit form
+ - `[ ]` Need Media Kit PDF
+ - `[x]` Set up "Become a Franchisee" contact form

@@ -9,7 +9,15 @@
 
 		<?php get_template_part('assets/template-parts/top-nav'); ?>
 
-		<div class="container"><p>Placeholder page for: EDDM</p></div>
+		<?php get_template_part('assets/template-parts/eddm/main'); ?>
+
+		<?php get_template_part('assets/template-parts/eddm/overview'); ?>
+
+		<?php get_template_part('assets/template-parts/eddm/why'); ?>
+
+		<?php get_template_part('assets/template-parts/eddm/features'); ?>
+
+		<?php get_template_part('assets/template-parts/eddm/qualifications'); ?>
 
 		<?php get_template_part('assets/template-parts/contact-us/contact-us'); ?>
 

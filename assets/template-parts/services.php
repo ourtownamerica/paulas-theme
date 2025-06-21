@@ -20,7 +20,7 @@
 					<hr class="gold-hr mb-3" />
 					<h3 class="text-forest">Birthday Program</h3>
 					<p>Send a personal birthday postcard that brings customers through your door.</p>
-					<a href='#' class="btn hover-leaf btn-forest w-100">LEARN MORE</a>
+					<a href='<?php echo home_url('/birthday-program'); ?>' class="btn hover-leaf btn-forest w-100">LEARN MORE</a>
 				</div>
 			</div>
 
@@ -30,7 +30,7 @@
 					<hr class="gold-hr mb-3" />
 					<h3 class="text-forest">Every Door Direct Mail (EDDM)</h3>
 					<p>Deliver your message to every home in your target area.</p>
-					<a href='#' class="btn hover-leaf btn-forest w-100">LEARN MORE</a>
+					<a href='<?php echo home_url('/every-door-direct-mail'); ?>' class="btn hover-leaf btn-forest w-100">LEARN MORE</a>
 				</div>
 			</div>
 
@@ -40,7 +40,7 @@
 					<hr class="gold-hr mb-3" />
 					<h3 class="text-forest">Targeted Postcard Campaigns</h3>
 					<p>Mail to the right audience based on location and interests.</p>
-					<a href='#' class="btn hover-leaf btn-forest w-100">LEARN MORE</a>
+					<a href='<?php echo home_url('/targeted-postcard'); ?>' class="btn hover-leaf btn-forest w-100">LEARN MORE</a>
 				</div>
 			</div>
 
@@ -50,7 +50,7 @@
 					<hr class="gold-hr mb-3" />
 					<h3 class="text-forest">Digital Marketing</h3>
 					<p>Show ads to nearby customers based on where they live, work, or go with geofencing.</p>
-					<a href='#' class="btn hover-leaf btn-forest w-100">LEARN MORE</a>
+					<a href='<?php echo home_url('/digital-marketing'); ?>' class="btn hover-leaf btn-forest w-100">LEARN MORE</a>
 				</div>
 			</div>
 		</div>
